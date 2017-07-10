@@ -68,9 +68,9 @@
       <!-- Accordion -->
       <div class="w3-card-2 w3-round">
         <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Followers</button>
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Followers <span id="my_Followers_user"></span></button>
           <div id="Demo1" class="w3-hide w3-container">
-            <p><strong>@Jake @Ollie @Jamie @Max @Dave @Anna @Amber @Chelsea @James</strong></p>
+            <p><strong>@Jake @Ollie @Jamie @Max @Dave @Anna @Amber @Chelsea @James @Eloy @Dorthea @Columbus @Tierra @Adriene @Eusebio @Thuy</strong></p>
           </div>
           <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
           <div id="Demo2" class="w3-hide w3-container">
@@ -182,6 +182,7 @@
           <div class="button" onclick="upgrade_cash_income();">Upgrade Cash Income +1 <span class="store_item_cost">$200</span></div>
           <div class="button" onclick="upgrade_post_income();">Upgrade Post Income +5 <span class="store_item_cost">$200</span></div>
           <div class="button" onclick="upgrade_job_income();">Upgrade Job Level +1 <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="upgrade_follower();">Upgrade Follower Income <span class="store_item_cost">$200</span></div>
           <h2>Random Items</h2>
           <div class="button" onclick="three_ninedynine();">Fidget Spinner <span  class="store_item_cost">$3.99</span></div>
           <div class="button" onclick="three_ninedynine();">Fidget Cube <span class="store_item_cost">$3.99</span></div>
@@ -262,10 +263,15 @@ var youtuber_job_level_status = 1;
 var game_amount_cash = 0;
 var game_per_second = 0;
 var post_amount_cash = 5;
-
+var game_amount_followers = 0; 
+var upgrade_followers = 0;
+  
+setInterval(function() {
+  document.getElementById('my_Followers_user').innerHTML = game_amount_followers + upgrade_followers;
+}, 3000);
 
 function game_amount_cash_gain() {
-  game_amount_cash += 1;
+  game_amount_cash += game_per_second;
 };
 
 setInterval(function() {
