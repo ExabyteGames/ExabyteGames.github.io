@@ -126,7 +126,7 @@ span.store_item_cost {
 
 /* LOGIN PAGE FORM */
 #loginPage {
-	display: none; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -157,6 +157,12 @@ span.store_item_cost {
 	border-radius: 10px;
 	font-size: 18px;
 	padding: 0 18px 0 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+	* .input_post_user_finn {
+		width: 300px;
+	}
 }
 
 @media only screen and (max-width: 740px) {
