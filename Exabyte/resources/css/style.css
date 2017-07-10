@@ -173,4 +173,7 @@ span.store_item_cost {
 		font-size: 20px;
 		font-weight: 800;
 	}
+	* .input_post_user_finn {
+		width: 400px;
+	}
 }
