@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<title>Exabyte</title>
+<meta charset="UTF-8">
+<link rel="icon" href="./favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="resources/css/style.css">
+<link type="text/css" rel="stylesheet" href="resources/css/Style4Website.css">
+<link type="text/css" rel="stylesheet" href="resources/css/Style5Website.css">
+
+<link type="text/css" rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Fredoka+One" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="resources/js/main.js"></script>
+<style>
+</style>
+<body class="w3-theme-l5" onload="playGame();">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button"><strong>@John</strong> posted on your wall</a>
+      <a href="#" class="w3-bar-item w3-button"><strong>@Jane</strong> liked your post</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account"><img src="images/avatar2.png" class="w3-circle" style="height:25px;width:25px" alt="Avatar"></a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large"><strong>@Jane</strong> posted on your wall</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large"><strong>@John</strong> liked your post</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-home"></i> My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card-2 w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center" id="user_usr_username"></h4>
+         <p class="w3-center"><img src="images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-gamepad fa-fw w3-margin-right w3-text-theme"></i> <span id="user_usr_job"></span> Level <span id="youtuber_job_level_status"></span></p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> July 12, 1998</p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card-2 w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Followers</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p><strong>@Jake @Ollie @Jamie @Max @Dave @Anna @Amber @Chelsea @James</strong></p>
+          </div>
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+          <div id="Demo2" class="w3-hide w3-container">
+            <p>Youtuber Tour - 16th</p>
+            <p>Youtuber Tour - 4th</p>
+            <p>Youtuber Tour - 18th</p>
+            <p>Youtuber Tour - 28th</p>
+          </div>
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+          <div id="Demo3" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+           <div class="w3-half">
+             <img src="images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="images/fjords.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      
+      <!-- Interests --> 
+      <div class="w3-card-2 w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">News</span>
+            <span class="w3-tag w3-small w3-theme-d4">Youtubing</span>
+            <span class="w3-tag w3-small w3-theme-d3">Programming</span>
+            <span class="w3-tag w3-small w3-theme-d2">Games</span>
+            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
+            <span class="w3-tag w3-small w3-theme-l1">Chai Tea</span>
+            <span class="w3-tag w3-small w3-theme-l2">Food</span>
+            <span class="w3-tag w3-small w3-theme-l3">Design</span>
+            <span class="w3-tag w3-small w3-theme-l4">Art</span>
+            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+          </p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <p><strong>New Notification!</strong></p>
+        <p id="notification_SECTION"></p>
+      </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card-2 w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity"><strong>Post To Earn Money!</strong></h6>
+              <input type="text" id="post_a_letter" class="input_post_user_finn" />
+              <div type="button" onclick="post_a_letter();" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</div>
+              <h3 id="posted_true_when_posted" style="font-family: 'Fredericka the Great', cursive; font-weight: 800;"></h3> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="posting_area_user" id="posting_area_user">
+
+      </div>
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card-2 w3-round w3-white w3-center">
+        <div class="w3-container">
+          <h2 style="font-weight: 900;">Your Cash:</h2>
+          <h3 style="font-weight: bold;" id="game_amount_cash"></h3>
+          <button type="button" id="myBtn" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-usd"></i>  Store  <i class="fa fa-usd"></i></button> 
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close"><i class="fa fa-times"></i></span>
+          <br />
+          <br />
+          <h1>$ Store $</h1>
+          <h2>Upgrade</h2>
+          <div class="button" onclick="upgrade_cash_income();">Upgrade Cash Income +1 <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="upgrade_post_income();">Upgrade Post Income +5 <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="upgrade_job_income();">Upgrade Job Level +1 <span class="store_item_cost">$200</span></div>
+          <h2>Random Items</h2>
+          <div class="button" onclick="three_ninedynine();">Fidget Spinner <span  class="store_item_cost">$3.99</span></div>
+          <div class="button" onclick="three_ninedynine();">Fidget Cube <span class="store_item_cost">$3.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Trash Can <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Hat <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Book <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Pan <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="three_ninedynine();">Matches <span class="store_item_cost">$3.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Clock <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Flashlight <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">Water Bottle <span class="store_item_cost">$19.99</span></div>
+          <div class="button">Coffee Brewer <span class="store_item_cost">$200</span></div>
+          <h2>Pets<h2>
+          <div class="button" onclick="two_hundo();">Pet Dog <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Cat <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Lizard <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Octopus <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Fish <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Turtle <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Tarantula <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">Pet Guinea Pig <span class="store_item_cost">$200</span></div>
+          <h2>Work</h2>
+          <div class="button" onclick="one_thousand();">New Laptop <span class="store_item_cost">$1000</span></div>
+          <div class="button" onclick="one_thousand();">New IPhone <span class="store_item_cost">$1000</span></div>
+          <div class="button" onclick="nineteen_nindynine();">New Headphones <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="two_hundo();">New Website <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">New Mobile App <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="two_hundo();">New Video Game <span class="store_item_cost">$200</span></div>
+          <div class="button" onclick="nineteen_nindynine();">New Pen <span class="store_item_cost">$19.99</span></div>
+          <div class="button" onclick="nineteen_nindynine();">New Journal <span class="store_item_cost">$19.99</span></div>
+        </div>
+
+      </div>
+
+      <br>
+      
+      <div class="w3-center">
+        <a href="https://www.developLucca.wordpress.com" target="_blank"><img id="LuccaINCad_ad" src="resources/ads/LuccaINCad(2).jpg" alt="Lucca INC. Create Your Website Today!" /></a>
+      </div>
+      <br>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- The Sign up section -->
+<div id="loginPage">
+  <div class="loginpage-content">
+    <h1>Giving Exabyte Data:</h1>
+    <p>Sorry to inturrupt your game, but before we get started we need some information from you. This information can be real or fake. :D</p>
+    <h4>Your Username: @<input type="username" name="username" id="username" /></h4>
+    <br />
+    <h4>Your New/old Job: <input type="userjob" name="userjob" id="userjob" /></h4>
+    <br />
+    <p><strong><u>NOTE:</u> None Of This Information Will Be Shared Any One But Yourself.</strong></p>
+    <button type="button" onclick="closeGamePLAY();" class="button">Play</button>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.developLucca.com" target="_blank">Lucca INC</a></p>
+</footer>
+ 
+<script>
+//variables Here
+var youtuber_job_level_status = 1;
+var game_amount_cash = 0;
+var game_per_second = 1;
+var post_amount_cash = 5;
+
+
+function game_amount_cash_gain() {
+  game_amount_cash += 1;
+};
+
+setInterval(function() {
+  game_amount_cash += game_per_second;
+}, 1000);
+
+setInterval(function() {
+  document.getElementById('game_amount_cash').innerHTML = "$" + game_amount_cash;
+  document.getElementById('youtuber_job_level_status').innerHTML = "(" + youtuber_job_level_status + ")";
+  if (game_amount_cash.length > 5) {
+    game_amount_cash.length * 100000;
+  }
+}, 1000);
+
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html> 
