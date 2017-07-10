@@ -267,7 +267,8 @@ var game_amount_followers = 0;
 var upgrade_followers = 0;
   
 setInterval(function() {
-  document.getElementById('my_Followers_user').innerHTML = game_amount_followers + upgrade_followers;
+  game_amount_followers + upgrade_followers;
+  document.getElementById('my_Followers_user').innerHTML = "(" + game_amount_followers + ")";
 }, 3000);
 
 function game_amount_cash_gain() {
