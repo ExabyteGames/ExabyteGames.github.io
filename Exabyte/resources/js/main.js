@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	//The notofications
 	setInterval(function() {
-    var notoifi = Math.floor((Math.random() * 10) + 1);
+    var notoifi = Math.floor((Math.random() * 15) + 1);
     if(notoifi === 1) {
       document.getElementById('notification_SECTION').innerHTML = "Someone Is Looking At Your Profile!<br /> <strong>+1 View.</strong>";
     } if (notoifi === 2) {
@@ -24,7 +24,17 @@ $(document).ready(function() {
       document.getElementById('notification_SECTION').innerHTML = "<strong>@Ollie</strong> Sent You A Picture";
     } if (notoifi === 10) {
       document.getElementById('notification_SECTION').innerHTML = "<strong>@Jake</strong> Sup.";
-  }
+    } if (notoifi === 11) {
+      document.getElementById('notification_SECTION').innerHTML = "<strong>@Justin</strong> Disliked Your Post";
+    } if (notoifi === 12) {
+      document.getElementById('notification_SECTION').innerHTML = "<strong>@Lucas</strong> Disliked Your Post";
+    } if (notoifi === 13) {
+      document.getElementById('notification_SECTION').innerHTML = "<strong>@Mary</strong> Disliked Your Post";
+    } if (notoifi === 14) {
+      document.getElementById('notification_SECTION').innerHTML = "<strong>@Streeter</strong> Liked Your Post";
+    } if (notoifi === 15) {
+      document.getElementById('notification_SECTION').innerHTML = "<strong>@Donald Trump</strong> Sent You A Message: I Smell like butt.";
+    }
 }, 20000);
 
 
@@ -119,6 +129,16 @@ function upgrade_job_income() {
 		game_amount_cash -= 200;
 		alert("Sucessfully Upgraded!");
 		youtuber_job_level_status += 1;
+	} else {
+		alert("Sorry You Need More Cash!");
+	}
+}
+
+function upgrade_follower() {
+	if(game_amount_cash >= 200) {
+		game_amount_cash -= 200;
+		alert("Sucessfully Upgraded!");
+		upgrade_followers += 1;
 	} else {
 		alert("Sorry You Need More Cash!");
 	}
